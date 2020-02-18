@@ -25,5 +25,20 @@ namespace EFCoreTutorial
             db.Songs.Add(song);
             db.SaveChanges();
         }
+
+        public object GetById(int id)
+        {
+            return db.Songs.Single(s => s.Id == id);
+        }
+
+        public void Delete(Song song)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
